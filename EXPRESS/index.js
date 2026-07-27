@@ -58,10 +58,10 @@ app.listen(port, () => {
 
 // Query Strings Below
 
-app.get("/search", (req, res) => {
-    console.log(req.query);
-    res.send("no results");
-})
+// app.get("/search", (req, res) => {
+//     console.log(req.query);
+//     res.send("no results");
+// })
 
 ////////////////////////////////////////////////
 
