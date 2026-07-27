@@ -8,6 +8,8 @@ app.listen(port, () => {
     console.log(`app is listening on port ${port}`);
 });
 
+/////////////////////////////////////////////////////
+
 // app.use((req, res) => {
 //         // console.log(req);
 //     console.log("request received");
@@ -17,7 +19,10 @@ app.listen(port, () => {
 //     });
 // });
 
+//////////////////////////////////////////////////////
+
 // Routing Examples below.
+
 // app.get("/", (req, res) => {
 //     res.send("Hello, i am root path");
 // });
@@ -31,14 +36,40 @@ app.listen(port, () => {
 //     res.send("this path does not exist");
 // });
 
-// path parameters
+// path parameters Below
 
-app.get("/", (req, res) => {
-    res.send("Hello, i am root path");
-});
-app.get("/:username/:id", (req, res) => {
-    console.log(req.params);
-    res.send("hello i am root");
+// app.get("/", (req, res) => {
+//     res.send("Hello, i am root path");
+// });
+
+//////////////////////////////////////////////
+// app.get("/:username/:id", (req, res) => {
+//     console.log(req.params);
+//     res.send("hello i am root");
+// })
+
+/////////////////////////////////////////////
+// app.get("/:username/:id", (req, res) => {
+//     let {username, id} = req.params;
+//     res.send(`welcome to the page of @${username}`);
+// })
+
+/////////////////////////////////////////////
+
+// Query Strings Below
+
+app.get("/search", (req, res) => {
+    console.log(req.query);
+    res.send("no results");
 })
 
+////////////////////////////////////////////////
+
+// app.get("/search", (req, res) => {
+//     let {q} = req.query;
+//     if(!q) {
+//         res.send("<h1>nothing searched</h1>")
+//     }
+//     res.send(`<h1>search results for query: ${q}</h1>`);
+// })
 
