@@ -48,7 +48,7 @@ app.listen(port, () => {
 //     res.send("hello i am root");
 // })
 
-/////////////////////////////////////////////
+///////////////////////////////////////////// Destructuring Example
 // app.get("/:username/:id", (req, res) => {
 //     let {username, id} = req.params;
 //     res.send(`welcome to the page of @${username}`);
