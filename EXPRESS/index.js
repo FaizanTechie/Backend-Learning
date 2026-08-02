@@ -73,3 +73,18 @@ app.listen(port, () => {
 //     res.send(`<h1>search results for query: ${q}</h1>`);
 // })
 
+// Custom Middleware
+
+app.use((req, res, next) => {
+    console.log("Time:", new Date().toLocaleString());
+    console.log(`${req.method} ${req.url}`);
+    next(); // Pass control to the next middleware or route
+});
+
+app.get("/about", (req, res) => {
+    res.send("<h1>About Page</h1>");
+});
+
+app.get("/contact", (req, res) => {
+    res.send("<h1>Contact Page</h1>");
+});
